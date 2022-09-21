@@ -1,0 +1,31 @@
+body{
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: dodgerblue;
+   text-align: center;
+   align-items: center;
+   color: white;
+
+}
+.setAmount{
+padding: 50px;
+}
+#easy,#medium,#hard{
+    color: white;
+    background:linear-gradient(rgb(176, 12, 12),rgb(102, 0, 0));
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 1px  solid black;
+    box-shadow: 2px 2px 5px rgb(0, 80, 102);
+    border: none;
+    width: 100px;
+}
+
+#easy:hover,#medium:hover,#hard:hover{
+background:linear-gradient(red,rgb(151, 1, 1));
+}

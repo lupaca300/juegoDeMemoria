@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var Horainit=new Date();
+function tiempoTotalJugado(){
+
+let horaFinish=new Date();
+let min=horaFinish.getMinutes()-Horainit.getMinutes();
+
+if(min>=10){
+    let num10=10;
+    return [num10.toString(),'00'];
+} else{
+    let sec=horaFinish.getSeconds()-Horainit.getSeconds();
+    if(sec<0){
+        secOfInit=60-Horainit.getSeconds();
+        secOfFinish=horaFinish.getSeconds();
+        secFinal=secOfFinish+secOfInit;
+        
+        if(min<0){
+    
+            min=(60-Horainit.getMinutes()+horaFinish.getMinutes()-1);
+    
+        }
+        return [min.toString(),secFinal.toString()];
+
+    }else if(sec==0){
+        if(min<0){
+    
+    min=(60-Horainit.getMinutes()+horaFinish.getMinutes());
+
+}
+        return [min.toString(),'00'];
+    }else {
+        if(min<0){
+    
+    min=(60-Horainit.getMinutes()+horaFinish.getMinutes()+1);
+
+}
+        return [min.toString(),sec.toString()];
+    }
+}
+
+
+}
+
+function prueba1(){
+    let g=new Date();
+    return [toString(g.getHours()),g.getMinutes()];
+}
+    </script>
+</body>
+</html>
